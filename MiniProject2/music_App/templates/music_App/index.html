@@ -1,0 +1,16 @@
+<h1>Song List</h1>
+
+{% if song_list %}
+<ul>
+    {% for songs in song_list %}
+    <li>Song Name: {{ songs.songName }}</li>
+    <li>Album Name: {{ songs.album }}</li>
+    <li>Artist Name: {{ songs.artist }}</li>
+    <li>Song Duration: {{ songs.duration }}</li>
+    <li>Song Rating: {{ songs.rating }}</li>
+    <hr/>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
